@@ -1,0 +1,50 @@
+#include <stdio.h>  
+
+struct peter{
+    int permen;
+    int coklat;
+};
+
+struct hasilbagi{
+    int teman;
+    int gabung;
+    int sisa;
+    
+};
+
+int main()
+{  
+    struct peter makanan;
+    struct hasilbagi akhir;
+
+    //input
+    printf("Masukkan jumlah permen awal (X): ");
+    scanf("%i",&makanan.permen);
+
+    printf("Masukkan jumlah coklat awal (Y): ");
+    scanf("%i",&makanan.coklat);
+
+    printf("Masukkan jumlah teman Peter (Z): ");
+    scanf("%i",&akhir.teman);
+
+    //tahap 1
+    makanan.permen = makanan.permen - (makanan.permen/3);
+    makanan.coklat = makanan.coklat + makanan.permen;
+
+    //tahap 2
+    makanan.coklat = makanan.coklat - 10;
+    makanan.permen = makanan.permen + makanan.coklat;
+
+    //gabung
+    akhir.gabung = makanan.coklat + makanan.permen;
+    akhir.sisa = akhir.gabung % akhir.teman;
+
+    printf("Sisa permen Peter setelah dibagikan adalah %i buah!", akhir.sisa);
+
+    return 0;
+}
+/*Hasil Terminal:
+Masukkan jumlah permen awal (X): 90
+Masukkan jumlah coklat awal (Y): 150
+Masukkan jumlah teman Peter (Z): 4
+Sisa permen Peter setelah dibagikan adalah 0 buah!*/
