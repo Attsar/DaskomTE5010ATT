@@ -1,0 +1,18 @@
+/*There is a bag of candy to be distributed evenly among the four children. Each child must get the same number,
+and if the remainder is not enough for the four children, the remainder is not distributed.*/
+#include <stdio.h>
+int candy;
+int children = 4;
+
+int main()
+{
+    printf("Enter the amount of candy inside the bag: ");
+    scanf("%d",&candy);
+    int distribute = candy/children;
+    int candiesleft = candy%children;
+
+    printf("Each child gets %d candy\n",distribute);
+    printf("There is %d candy left",candiesleft);
+
+return 0;
+}
